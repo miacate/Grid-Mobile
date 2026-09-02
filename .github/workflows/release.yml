@@ -75,12 +75,6 @@ jobs:
           MAPS_URL=https://map.mygrid.app/v1/protomaps.pmtiles
           VERSION_CHECK_URL=https://version.mygrid.app
           EOF
-
-      - name: Install provisioning profile
-        run: |
-          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          cp "$HOME/.fastlane-secrets/Grid_Appstore_CI.mobileprovision" \
-            ~/Library/MobileDevice/Provisioning\ Profiles/fafae38f-8ebf-4447-8eb7-ba01d807e6bb.mobileprovision
             
       - name: Build Android
         run: |
